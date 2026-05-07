@@ -1,0 +1,294 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", "Inter", sans-serif;
+  background: #071217;
+  color: #eef6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 24%),
+    radial-gradient(circle at top right, rgba(239, 68, 68, 0.13), transparent 24%),
+    linear-gradient(180deg, #061016 0%, #071217 52%, #09141b 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.shell {
+  width: min(1400px, calc(100vw - 48px));
+  margin: 0 auto;
+  padding: 40px 0 72px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.eyebrow,
+.panelLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #7dd3fc;
+  font-size: 0.76rem;
+  margin: 0 0 10px;
+}
+
+.hero h1 {
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: 0.96;
+  margin: 0;
+  max-width: 14ch;
+}
+
+.lede {
+  color: #a8bccd;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  max-width: 70ch;
+  margin-top: 18px;
+}
+
+.heroPanel,
+.metricCard,
+.panel,
+.snapshotCard {
+  background: rgba(9, 20, 27, 0.9);
+  border: 1px solid #1e3442;
+  border-radius: 24px;
+  box-shadow: 0 18px 46px rgba(3, 10, 16, 0.34);
+}
+
+.heroPanel {
+  padding: 24px;
+}
+
+.heroLabel,
+.tag,
+.snapshotCard span {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.heroLabel {
+  background: rgba(239, 68, 68, 0.12);
+  color: #fda4af;
+}
+
+.heroPanel strong {
+  display: block;
+  margin-top: 18px;
+  font-size: 1.45rem;
+}
+
+.heroPanel p {
+  color: #acc0d1;
+  line-height: 1.75;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.metricCard {
+  padding: 18px 20px;
+}
+
+.metricCard span {
+  display: block;
+  color: #95aaba;
+  margin-bottom: 10px;
+}
+
+.metricCard strong {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.metricCard p {
+  margin: 0;
+  color: #d7e3ec;
+}
+
+.tone-stable strong {
+  color: #67e8f9;
+}
+
+.tone-watch strong {
+  color: #fb923c;
+}
+
+.tone-critical strong {
+  color: #fb7185;
+}
+
+.panelGrid {
+  display: grid;
+  grid-template-columns: 1.45fr 0.95fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.panel {
+  padding: 22px;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.panelHeader h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.tag {
+  color: #9dddf2;
+  background: rgba(56, 189, 248, 0.11);
+}
+
+.snapshotStack {
+  display: grid;
+  gap: 14px;
+}
+
+.snapshotCard {
+  padding: 18px;
+}
+
+.snapshotCard span {
+  color: #fecdd3;
+  background: rgba(251, 113, 133, 0.12);
+}
+
+.snapshotCard strong {
+  display: block;
+  margin: 12px 0 8px;
+  font-size: 1.02rem;
+}
+
+.snapshotCard p {
+  margin: 0;
+  color: #a9bed0;
+  line-height: 1.7;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 14px 10px;
+  border-bottom: 1px solid #1a2f3a;
+}
+
+th {
+  color: #91a8b7;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+}
+
+td {
+  color: #edf5fb;
+}
+
+.exceptionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exceptionList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-top: 1px solid #1a2f3a;
+}
+
+.exceptionList li:first-child {
+  border-top: 0;
+}
+
+.exceptionList strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.exceptionList p {
+  margin: 0;
+  color: #97adbf;
+}
+
+.exceptionMeta {
+  text-align: right;
+}
+
+.exceptionMeta span {
+  display: block;
+  color: #fca5a5;
+  font-weight: 700;
+}
+
+.exceptionMeta small {
+  color: #97adbf;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .panelGrid,
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .shell {
+    width: min(100vw - 24px, 1400px);
+    padding-top: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2.45rem;
+  }
+
+  .panel,
+  .heroPanel,
+  .metricCard,
+  .snapshotCard {
+    border-radius: 18px;
+  }
+}
